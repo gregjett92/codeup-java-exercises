@@ -1,5 +1,17 @@
 public class StringExercise {
     public static void main(String[] args) {
-        System.out.println("hey");
+        String one = "We don't need no education\n" +
+                "We don't need no thought control";
+        System.out.println(one);
+        String two = "Check \"this\" out!, \"s inside of \"s!";
+        System.out.println(two);
+        String three = "In windows, the main drive is usually C:\\";
+        System.out.println(three);
+        String four = "I can do backslashes \\, double backslashes \\\\,\n" +
+                "and the amazing triple backslash \\\\\\!";
+        System.out.println(four);
+
     }
 }
+
+
