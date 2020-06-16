@@ -9,7 +9,7 @@ public class Cat extends Animal {
         this.noOfLivesLeft = noOfLivesLeft;
     }
 
-    public int  getNoOfLivesLeft() {
+    public int getNoOfLivesLeft() {
         return noOfLivesLeft;
     }
 
@@ -17,4 +17,8 @@ public class Cat extends Animal {
         this.noOfLivesLeft = noOfLivesLeft;
     }
 
+    @Override
+    public void makeNoise() {
+        System.out.println("Meow meow!!");
+    }
 }

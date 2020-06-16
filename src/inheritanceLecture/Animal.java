@@ -4,19 +4,21 @@ public class Animal {
 
     private String species;
     private int age;
-//========= EMPTY CONSTRUCTOR ========
-//    public Animal() {
+    protected String protectedProp = "Protected Prop Value";
+
+    //    public Animal() {
 //    }
-//========== CONSTRUCTOR ============
+//
     public Animal(String species, int age) {
         this.species = species;
         this.age = age;
     }
 
+
     public void makeNoise() {
         System.out.println("This animal is making some noise...");
     }
-    //============= GETTER AND SETTER ============
+
     public String getSpecies() {
         return species;
     }

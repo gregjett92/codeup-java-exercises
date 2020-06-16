@@ -1,16 +1,27 @@
 package inheritanceLecture;
 
+import inheritanceLecture.Animal;
+
 public class Dog extends Animal {
 
     private String breed;
     private String name;
     private String nameOfOwner;
 
+    public void soutProtectedProp() {
+        System.out.println(protectedProp);
+    }
+
     public String getBreed() {
         return breed;
     }
 
-    public Dog(String species, int age, String breed){
+    // unique method to the Dog class
+    public void fetchBall() {
+        System.out.println("Dog is fetching the ball...");
+    }
+
+    public Dog(String species, int age, String breed, String name, String nameOfOwner) {
         super(species, age);
         this.breed = breed;
         this.name = name;
@@ -31,10 +42,6 @@ public class Dog extends Animal {
         System.out.println(noise);
     }
 
-    public int makeNoise(int x) {
-        return 3;
-    }
-
     public void makeGenericAnimalNoise() {
         super.makeNoise();
     }
@@ -48,9 +55,5 @@ public class Dog extends Animal {
                 '}';
     }
 
-    public static void main(String[] args) {
-        Dog d = new Dog();
-        System.out.println(d.makeNoise(3));
-    }
 
 }
