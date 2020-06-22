@@ -30,13 +30,21 @@ public class Input {
     }
 
     public int getInt() {
-        if (sc.hasNextInt()) {
-            return sc.nextInt();
-        } else {
-            System.out.println("Invalid input. Enter valid integer.");
-            sc.next();
+        String userInput = getString();
+        try{
+            int userInt = Integer.valueOf(userInput);
+            return userInt;
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid ! Please enter a valid integer");
             return getInt();
         }
+//        if (sc.hasNextInt()) {
+//            return sc.nextInt();
+//        } else {
+//            System.out.println("Invalid input. Enter valid integer.");
+//            sc.next();
+//            return getInt();
+//        }
     }
 
     public int getInt(int min, int max) {
@@ -50,13 +58,14 @@ public class Input {
     }
 
     public double getDouble() {
-        if (sc.hasNextDouble()) {
-            return sc.nextDouble();
-        } else {
-            System.out.println("Invalid input. Enter valid number.");
-            sc.next();
-            return getInt();
-        }
+        String userInput = getString();
+      try {
+          double userDouble = Double.valueOf(userInput);
+          return userDouble;
+      } catch (NumberFormatException e) {
+          System.out.println("Invalid input! Enter a valid number!");
+          return getDouble();
+      }
     }
 
     public double getDouble(double min, double max) {
